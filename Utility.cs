@@ -35,6 +35,27 @@ public class Utility
         return numbers;
     }
 
+    public static int[] GetDivisionNumbers()
+    {
+        var random = new Random();
+
+        int firstNumber = random.Next(1, 101);
+        int secondNumber = random.Next(1, 101);
+
+        var numbers = new int[2];
+
+        while (firstNumber % secondNumber != 0)
+        {
+            firstNumber = random.Next(1, 101);
+            secondNumber = random.Next(1, 101);
+        }
+
+        numbers[0] = firstNumber;
+        numbers[1] = secondNumber;
+
+        return numbers;
+    }
+
     public static string ValidateResult(string? result)
     {
         while (string.IsNullOrWhiteSpace(result) || !int.TryParse(result, out _))

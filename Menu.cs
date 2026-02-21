@@ -32,10 +32,13 @@ public class Menu
                     game.AdditionGame("Addition Game");
                     break;
                 case "S":
+                    game.SubtractionGame("Subtraction Game");
                     break;
                 case "M":
+                    game.MultiplicationGame("Multiplication Game");
                     break;
                 case "D":
+                    game.DivisionGame("Division Game");
                     break;
                 case "V":
                     Utility.GetGameHistory(name);
